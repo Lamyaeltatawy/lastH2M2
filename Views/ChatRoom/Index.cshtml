@@ -1,0 +1,51 @@
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="containerchat">
+    <div class="page-content page-container" id="page-content">
+    
+        <div class="row container d-flex justify-content-center">
+            <div class="chat">
+            <div class="col-lg">
+                <div class="card card-bordered">
+                    <div class="card-header">
+                        <h4 class="card-title"><strong>Chat</strong></h4> <a class="btn btn-xs btn-secondary" href="/Home/Index" data-abc="true">Close</a>
+                    </div>
+                    <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+                        <div class="media media-chat">
+                            <div><input type="hidden" id="userInput" value="@User.Identity.Name"/></div>
+                            <div class="media-body">
+                               <p id="messagesList"></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="publisher bt-1 border-light"> <input type="text" id="messageInput" placeholder="Write something">
+                       @* file upload*@
+                        <a class="publisher-btn" href="/Home/Privacy" data-abc="true">
+                            <i class="fa fa-file"></i></a> 
+                            @*button send text*@
+               <div class="row">
+                <div class="col-6">
+                    <input type="button" id="sendButton" value="Send Message" />
+                </div>
+                          
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script src="~/js/send button.js"></script>
+    <link rel="stylesheet" href="~/css/chat.css" asp-append-version="true">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+</div>
+
